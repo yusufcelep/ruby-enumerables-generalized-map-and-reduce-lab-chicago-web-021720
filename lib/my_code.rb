@@ -9,5 +9,16 @@ def map(array)
 end
 
 def reduce(array, sv = nil)
-  
+  if sv
+    sum = sv
+    i = 0 
+  else 
+    sum = array [0]
+    i = 1 
+  end
+  while i < array.length
+    sum = yeild(sum, array[i])
+    i += 1 
+  end
+  sum
 end
